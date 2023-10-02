@@ -19,8 +19,15 @@ function MealsOverviewScreen({ route, navigation }) {
       title: categoriesTitle,
     });
   },[catId, navigation]);
+
   function renderMealItems(itemData) {
     const item = itemData.item;
+
+    function pressHandler() {
+      navigation.navigate('Details', {
+        mealId: item.id,
+      })
+    }
 
     const mealItemProps = {
       title: item.title,
@@ -29,7 +36,7 @@ function MealsOverviewScreen({ route, navigation }) {
       complexity: item.complexity,
       duration: item.duration,
     };
-    return <MealItem {...mealItemProps} />;
+    return <MealItem {...mealItemProps} onPress = {pressHandler} />;
   }
 
   return (
