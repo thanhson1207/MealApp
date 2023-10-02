@@ -9,6 +9,7 @@ function CategoriesScreen({ navigation }) {
     function pressHandler() {
       navigation.navigate('Meals OverView', {
         categoryId: itemData.item.id,
+        title: itemData.item.title,
       });
     }
     return (
