@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
   },
   subtitleContainer: {
     padding: 6,
-    marginHorizontal: 12,
+    marginHorizontal: 90,
     marginVertical: 2,
     borderBottomColor: "#e2b497",
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
   },
 });
